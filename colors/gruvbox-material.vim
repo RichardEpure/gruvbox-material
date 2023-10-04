@@ -108,7 +108,7 @@ endif
 call gruvbox_material#highlight('DiffAdd', s:palette.none, s:palette.bg_diff_green)
 call gruvbox_material#highlight('DiffChange', s:palette.none, s:palette.bg_diff_blue)
 call gruvbox_material#highlight('DiffDelete', s:palette.none, s:palette.bg_diff_red)
-call gruvbox_material#highlight('DiffText', s:palette.bg0, s:palette.yellow)
+call gruvbox_material#highlight('DiffText', s:palette.bg0, s:palette.fg0)
 call gruvbox_material#highlight('Directory', s:palette.green, s:palette.none)
 call gruvbox_material#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
 if s:configuration.ui_contrast ==# 'low'
@@ -162,13 +162,13 @@ endif
 call gruvbox_material#highlight('Question', s:palette.blue, s:palette.none)
 if s:configuration.spell_foreground ==# 'none'
   call gruvbox_material#highlight('SpellBad', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
-  call gruvbox_material#highlight('SpellCap', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
-  call gruvbox_material#highlight('SpellLocal', s:palette.none, s:palette.none, 'undercurl', s:palette.aqua)
+  call gruvbox_material#highlight('SpellCap', s:palette.none, s:palette.none, 'undercurl', s:palette.fg0)
+  call gruvbox_material#highlight('SpellLocal', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
   call gruvbox_material#highlight('SpellRare', s:palette.none, s:palette.none, 'undercurl', s:palette.purple)
 else
   call gruvbox_material#highlight('SpellBad', s:palette.red, s:palette.none, 'undercurl', s:palette.red)
-  call gruvbox_material#highlight('SpellCap', s:palette.yellow, s:palette.none, 'undercurl', s:palette.blue)
-  call gruvbox_material#highlight('SpellLocal', s:palette.aqua, s:palette.none, 'undercurl', s:palette.aqua)
+  call gruvbox_material#highlight('SpellCap', s:palette.fg0, s:palette.none, 'undercurl', s:palette.blue)
+  call gruvbox_material#highlight('SpellLocal', s:palette.yellow, s:palette.none, 'undercurl', s:palette.aqua)
   call gruvbox_material#highlight('SpellRare', s:palette.purple, s:palette.none, 'undercurl', s:palette.purple)
 endif
 if s:configuration.transparent_background == 2
@@ -350,10 +350,10 @@ else
 endif
 call gruvbox_material#highlight('String', s:palette.green, s:palette.none)
 call gruvbox_material#highlight('Character', s:palette.green, s:palette.none)
-call gruvbox_material#highlight('Constant', s:palette.aqua, s:palette.none)
-call gruvbox_material#highlight('Macro', s:palette.aqua, s:palette.none)
-call gruvbox_material#highlight('Identifier', s:palette.yellow, s:palette.none)
-call gruvbox_material#highlight('Todo', s:palette.bg0, s:palette.yellow, 'bold')
+call gruvbox_material#highlight('Constant', s:palette.yellow, s:palette.none)
+call gruvbox_material#highlight('Macro', s:palette.yellow, s:palette.none)
+call gruvbox_material#highlight('Identifier', s:palette.fg0, s:palette.none)
+call gruvbox_material#highlight('Todo', s:palette.bg0, s:palette.fg0, 'bold')
 if s:configuration.disable_italic_comment
   call gruvbox_material#highlight('Comment', s:palette.grey1, s:palette.none)
   call gruvbox_material#highlight('SpecialComment', s:palette.grey1, s:palette.none)
@@ -372,24 +372,24 @@ call gruvbox_material#highlight('Red', s:palette.red, s:palette.none)
 call gruvbox_material#highlight('Orange', s:palette.orange, s:palette.none)
 call gruvbox_material#highlight('Yellow', s:palette.blue, s:palette.none)
 call gruvbox_material#highlight('Green', s:palette.green, s:palette.none)
-call gruvbox_material#highlight('Aqua', s:palette.aqua, s:palette.none)
-call gruvbox_material#highlight('Blue', s:palette.yellow, s:palette.none)
+call gruvbox_material#highlight('Aqua', s:palette.yellow, s:palette.none)
+call gruvbox_material#highlight('Blue', s:palette.fg0, s:palette.none)
 call gruvbox_material#highlight('Purple', s:palette.purple, s:palette.none)
 if s:configuration.enable_italic
   call gruvbox_material#highlight('RedItalic', s:palette.red, s:palette.none, 'italic')
   call gruvbox_material#highlight('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
   call gruvbox_material#highlight('YellowItalic', s:palette.blue, s:palette.none, 'italic')
   call gruvbox_material#highlight('GreenItalic', s:palette.green, s:palette.none, 'italic')
-  call gruvbox_material#highlight('AquaItalic', s:palette.aqua, s:palette.none, 'italic')
-  call gruvbox_material#highlight('BlueItalic', s:palette.yellow, s:palette.none, 'italic')
+  call gruvbox_material#highlight('AquaItalic', s:palette.yellow, s:palette.none, 'italic')
+  call gruvbox_material#highlight('BlueItalic', s:palette.fg0, s:palette.none, 'italic')
   call gruvbox_material#highlight('PurpleItalic', s:palette.purple, s:palette.none, 'italic')
 else
   call gruvbox_material#highlight('RedItalic', s:palette.red, s:palette.none)
   call gruvbox_material#highlight('OrangeItalic', s:palette.orange, s:palette.none)
   call gruvbox_material#highlight('YellowItalic', s:palette.blue, s:palette.none)
   call gruvbox_material#highlight('GreenItalic', s:palette.green, s:palette.none)
-  call gruvbox_material#highlight('AquaItalic', s:palette.aqua, s:palette.none)
-  call gruvbox_material#highlight('BlueItalic', s:palette.yellow, s:palette.none)
+  call gruvbox_material#highlight('AquaItalic', s:palette.yellow, s:palette.none)
+  call gruvbox_material#highlight('BlueItalic', s:palette.fg0, s:palette.none)
   call gruvbox_material#highlight('PurpleItalic', s:palette.purple, s:palette.none)
 endif
 if s:configuration.enable_bold
@@ -397,16 +397,16 @@ if s:configuration.enable_bold
   call gruvbox_material#highlight('OrangeBold', s:palette.orange, s:palette.none, 'bold')
   call gruvbox_material#highlight('YellowBold', s:palette.blue, s:palette.none, 'bold')
   call gruvbox_material#highlight('GreenBold', s:palette.green, s:palette.none, 'bold')
-  call gruvbox_material#highlight('AquaBold', s:palette.aqua, s:palette.none, 'bold')
-  call gruvbox_material#highlight('BlueBold', s:palette.yellow, s:palette.none, 'bold')
+  call gruvbox_material#highlight('AquaBold', s:palette.yellow, s:palette.none, 'bold')
+  call gruvbox_material#highlight('BlueBold', s:palette.fg0, s:palette.none, 'bold')
   call gruvbox_material#highlight('PurpleBold', s:palette.purple, s:palette.none, 'bold')
 else
   call gruvbox_material#highlight('RedBold', s:palette.red, s:palette.none)
   call gruvbox_material#highlight('OrangeBold', s:palette.orange, s:palette.none)
   call gruvbox_material#highlight('YellowBold', s:palette.blue, s:palette.none)
   call gruvbox_material#highlight('GreenBold', s:palette.green, s:palette.none)
-  call gruvbox_material#highlight('AquaBold', s:palette.aqua, s:palette.none)
-  call gruvbox_material#highlight('BlueBold', s:palette.yellow, s:palette.none)
+  call gruvbox_material#highlight('AquaBold', s:palette.yellow, s:palette.none)
+  call gruvbox_material#highlight('BlueBold', s:palette.fg0, s:palette.none)
   call gruvbox_material#highlight('PurpleBold', s:palette.purple, s:palette.none)
 endif
 if s:configuration.transparent_background || s:configuration.sign_column_background ==# 'none'
@@ -414,27 +414,27 @@ if s:configuration.transparent_background || s:configuration.sign_column_backgro
   call gruvbox_material#highlight('OrangeSign', s:palette.orange, s:palette.none)
   call gruvbox_material#highlight('YellowSign', s:palette.blue, s:palette.none)
   call gruvbox_material#highlight('GreenSign', s:palette.green, s:palette.none)
-  call gruvbox_material#highlight('AquaSign', s:palette.aqua, s:palette.none)
-  call gruvbox_material#highlight('BlueSign', s:palette.yellow, s:palette.none)
+  call gruvbox_material#highlight('AquaSign', s:palette.yellow, s:palette.none)
+  call gruvbox_material#highlight('BlueSign', s:palette.fg0, s:palette.none)
   call gruvbox_material#highlight('PurpleSign', s:palette.purple, s:palette.none)
 else
   call gruvbox_material#highlight('RedSign', s:palette.red, s:palette.bg2)
   call gruvbox_material#highlight('OrangeSign', s:palette.orange, s:palette.bg2)
   call gruvbox_material#highlight('YellowSign', s:palette.blue, s:palette.bg2)
   call gruvbox_material#highlight('GreenSign', s:palette.green, s:palette.bg2)
-  call gruvbox_material#highlight('AquaSign', s:palette.aqua, s:palette.bg2)
-  call gruvbox_material#highlight('BlueSign', s:palette.yellow, s:palette.bg2)
+  call gruvbox_material#highlight('AquaSign', s:palette.yellow, s:palette.bg2)
+  call gruvbox_material#highlight('BlueSign', s:palette.fg0, s:palette.bg2)
   call gruvbox_material#highlight('PurpleSign', s:palette.purple, s:palette.bg2)
 endif
 if s:configuration.diagnostic_text_highlight
   call gruvbox_material#highlight('ErrorText', s:palette.none, s:palette.bg_visual_red, 'undercurl', s:palette.red)
   call gruvbox_material#highlight('WarningText', s:palette.none, s:palette.bg_visual_yellow, 'undercurl', s:palette.blue)
-  call gruvbox_material#highlight('InfoText', s:palette.none, s:palette.bg_visual_blue, 'undercurl', s:palette.yellow)
+  call gruvbox_material#highlight('InfoText', s:palette.none, s:palette.bg_visual_blue, 'undercurl', s:palette.fg0)
   call gruvbox_material#highlight('HintText', s:palette.none, s:palette.bg_visual_green, 'undercurl', s:palette.green)
 else
   call gruvbox_material#highlight('ErrorText', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
   call gruvbox_material#highlight('WarningText', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
-  call gruvbox_material#highlight('InfoText', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
+  call gruvbox_material#highlight('InfoText', s:palette.none, s:palette.none, 'undercurl', s:palette.fg0)
   call gruvbox_material#highlight('HintText', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
 endif
 if s:configuration.diagnostic_line_highlight
@@ -461,12 +461,12 @@ elseif s:configuration.diagnostic_virtual_text ==# 'colored'
 else
   call gruvbox_material#highlight('VirtualTextWarning', s:palette.blue, s:palette.bg_visual_yellow)
   call gruvbox_material#highlight('VirtualTextError', s:palette.red, s:palette.bg_visual_red)
-  call gruvbox_material#highlight('VirtualTextInfo', s:palette.yellow, s:palette.bg_visual_blue)
+  call gruvbox_material#highlight('VirtualTextInfo', s:palette.fg0, s:palette.bg_visual_blue)
   call gruvbox_material#highlight('VirtualTextHint', s:palette.green, s:palette.bg_visual_green)
 endif
 call gruvbox_material#highlight('ErrorFloat', s:palette.red, s:palette.none)
 call gruvbox_material#highlight('WarningFloat', s:palette.blue, s:palette.none)
-call gruvbox_material#highlight('InfoFloat', s:palette.yellow, s:palette.none)
+call gruvbox_material#highlight('InfoFloat', s:palette.fg0, s:palette.none)
 call gruvbox_material#highlight('HintFloat', s:palette.green, s:palette.none)
 if &diff
   call gruvbox_material#highlight('CurrentWord', s:palette.bg0, s:palette.bg_green)
@@ -523,8 +523,8 @@ if ((has('termguicolors') && &termguicolors) || has('gui_running')) && !s:config
         \ 'red':           s:palette.red,
         \ 'yellow':        s:palette.blue,
         \ 'green':         s:palette.green,
-        \ 'cyan':          s:palette.aqua,
-        \ 'blue':          s:palette.yellow,
+        \ 'cyan':          s:palette.yellow,
+        \ 'blue':          s:palette.fg0,
         \ 'purple':        s:palette.purple,
         \ 'white':         &background ==# 'dark' ? s:palette.fg0 : s:palette.bg5,
         \ }
@@ -921,8 +921,8 @@ if !exists('g:Lf_PopupColorscheme')
 endif
 call gruvbox_material#highlight('Lf_hl_match', s:palette.green, s:palette.none, 'bold')
 call gruvbox_material#highlight('Lf_hl_match0', s:palette.green, s:palette.none, 'bold')
-call gruvbox_material#highlight('Lf_hl_match1', s:palette.aqua, s:palette.none, 'bold')
-call gruvbox_material#highlight('Lf_hl_match2', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('Lf_hl_match1', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('Lf_hl_match2', s:palette.fg0, s:palette.none, 'bold')
 call gruvbox_material#highlight('Lf_hl_match3', s:palette.purple, s:palette.none, 'bold')
 call gruvbox_material#highlight('Lf_hl_match4', s:palette.orange, s:palette.none, 'bold')
 call gruvbox_material#highlight('Lf_hl_matchRefine', s:palette.red, s:palette.none, 'bold')
@@ -956,8 +956,8 @@ call gruvbox_material#highlight('ClapProviderId', s:palette.fg1, s:palette.none,
 call gruvbox_material#highlight('ClapMatches1', s:palette.red, s:palette.none, 'bold')
 call gruvbox_material#highlight('ClapMatches2', s:palette.orange, s:palette.none, 'bold')
 call gruvbox_material#highlight('ClapMatches3', s:palette.blue, s:palette.none, 'bold')
-call gruvbox_material#highlight('ClapMatches4', s:palette.aqua, s:palette.none, 'bold')
-call gruvbox_material#highlight('ClapMatches5', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('ClapMatches4', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('ClapMatches5', s:palette.fg0, s:palette.none, 'bold')
 call gruvbox_material#highlight('ClapMatches6', s:palette.purple, s:palette.none, 'bold')
 call gruvbox_material#highlight('ClapFuzzyMatches', s:palette.green, s:palette.none, 'bold')
 call gruvbox_material#highlight('ClapNoMatchesFound', s:palette.red, s:palette.none, 'bold')
@@ -1011,8 +1011,8 @@ highlight! link deniteSelectedLin Green
 call gruvbox_material#highlight('CtrlPMatch', s:palette.green, s:palette.none, 'bold')
 call gruvbox_material#highlight('CtrlPPrtBase', s:palette.bg4, s:palette.none)
 call gruvbox_material#highlight('CtrlPLinePre', s:palette.bg4, s:palette.none)
-call gruvbox_material#highlight('CtrlPMode1', s:palette.yellow, s:palette.bg4, 'bold')
-call gruvbox_material#highlight('CtrlPMode2', s:palette.bg0, s:palette.yellow, 'bold')
+call gruvbox_material#highlight('CtrlPMode1', s:palette.fg0, s:palette.bg4, 'bold')
+call gruvbox_material#highlight('CtrlPMode2', s:palette.bg0, s:palette.fg0, 'bold')
 call gruvbox_material#highlight('CtrlPStats', s:palette.grey2, s:palette.bg4, 'bold')
 highlight! link CtrlPNoEntries Red
 highlight! link CtrlPPrtCursor Blue
@@ -1064,7 +1064,7 @@ highlight! link multiple_cursors_cursor Cursor
 highlight! link multiple_cursors_visual Visual
 " }}}
 " mg979/vim-visual-multi {{{
-call gruvbox_material#highlight('VMCursor', s:palette.yellow, s:palette.bg5)
+call gruvbox_material#highlight('VMCursor', s:palette.fg0, s:palette.bg5)
 let g:VM_Mono_hl = 'VMCursor'
 let g:VM_Extend_hl = 'Visual'
 let g:VM_Cursor_hl = 'VMCursor'
@@ -1111,11 +1111,11 @@ highlight! link RainbowLevel8 Green
 " }}}
 " luochen1990/rainbow {{{
 if !exists('g:rbpt_colorpairs')
-  let g:rbpt_colorpairs = [['blue', s:palette.yellow[0]], ['magenta', s:palette.purple[0]],
+  let g:rbpt_colorpairs = [['blue', s:palette.fg0[0]], ['magenta', s:palette.purple[0]],
         \ ['red', s:palette.red[0]], ['166', s:palette.orange[0]]]
 endif
 
-let g:rainbow_guifgs = [ s:palette.orange[0], s:palette.red[0], s:palette.purple[0], s:palette.yellow[0] ]
+let g:rainbow_guifgs = [ s:palette.orange[0], s:palette.red[0], s:palette.purple[0], s:palette.fg0[0] ]
 let g:rainbow_ctermfgs = [ '166', 'red', 'magenta', 'blue' ]
 
 if !exists('g:rainbow_conf')
@@ -1152,8 +1152,8 @@ let g:limelight_conceal_ctermfg = s:palette.grey0[1]
 let g:limelight_conceal_guifg = s:palette.grey0[0]
 " }}}
 " unblevable/quick-scope {{{
-call gruvbox_material#highlight('QuickScopePrimary', s:palette.aqua, s:palette.none, 'underline')
-call gruvbox_material#highlight('QuickScopeSecondary', s:palette.yellow, s:palette.none, 'underline')
+call gruvbox_material#highlight('QuickScopePrimary', s:palette.yellow, s:palette.none, 'underline')
+call gruvbox_material#highlight('QuickScopeSecondary', s:palette.fg0, s:palette.none, 'underline')
 " }}}
 " APZelos/blamer.nvim {{{
 highlight! link Blamer Grey
@@ -1250,12 +1250,12 @@ highlight! link rainbowcol7 Purple
 " romgrk/barbar.nvim {{{
 call gruvbox_material#highlight('BufferCurrent', s:palette.fg1, s:palette.bg0)
 call gruvbox_material#highlight('BufferCurrentIndex', s:palette.fg1, s:palette.bg0)
-call gruvbox_material#highlight('BufferCurrentMod', s:palette.yellow, s:palette.bg0)
+call gruvbox_material#highlight('BufferCurrentMod', s:palette.fg0, s:palette.bg0)
 call gruvbox_material#highlight('BufferCurrentSign', s:palette.grey2, s:palette.bg0)
 call gruvbox_material#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg0, 'bold')
 call gruvbox_material#highlight('BufferVisible', s:palette.fg1, s:palette.bg_dim)
 call gruvbox_material#highlight('BufferVisibleIndex', s:palette.fg1, s:palette.bg_dim)
-call gruvbox_material#highlight('BufferVisibleMod', s:palette.yellow, s:palette.bg_dim)
+call gruvbox_material#highlight('BufferVisibleMod', s:palette.fg0, s:palette.bg_dim)
 call gruvbox_material#highlight('BufferVisibleSign', s:palette.grey2, s:palette.bg_dim)
 call gruvbox_material#highlight('BufferVisibleTarget', s:palette.blue, s:palette.bg_dim, 'bold')
 call gruvbox_material#highlight('BufferInactive', s:palette.grey1, s:palette.bg_dim)
@@ -1284,8 +1284,8 @@ highlight! link NotifyDEBUGTitle Grey
 highlight! link NotifyTRACETitle Purple
 " }}}
 " rcarriga/nvim-dap-ui {{{
-call gruvbox_material#highlight('DapUIModifiedValue', s:palette.yellow, s:palette.none, 'bold')
-call gruvbox_material#highlight('DapUIBreakpointsCurrentLine', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('DapUIModifiedValue', s:palette.fg0, s:palette.none, 'bold')
+call gruvbox_material#highlight('DapUIBreakpointsCurrentLine', s:palette.fg0, s:palette.none, 'bold')
 highlight! link DapUIScope Blue
 highlight! link DapUIType Purple
 highlight! link DapUIDecoration Blue
@@ -1304,7 +1304,7 @@ highlight! link DapUIBreakpointsInfo Green
 call gruvbox_material#highlight('LspFloatWinBorder', s:palette.bg0, s:palette.bg0)
 call gruvbox_material#highlight('LspSagaDiagnosticHeader', s:palette.orange, s:palette.none, 'bold')
 call gruvbox_material#highlight('LspSagaCodeActionTitle', s:palette.purple, s:palette.none, 'bold')
-call gruvbox_material#highlight('DefinitionPreviewTitle', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('DefinitionPreviewTitle', s:palette.fg0, s:palette.none, 'bold')
 highlight! link LspSagaDiagnosticError Red
 highlight! link LspSagaDiagnosticWarn Yellow
 highlight! link LspSagaDiagnosticInfo Blue
@@ -1347,7 +1347,7 @@ call gruvbox_material#highlight('MiniStatuslineDevinfo', s:palette.grey2, s:pale
 call gruvbox_material#highlight('MiniStatuslineFileinfo', s:palette.grey2, s:palette.bg_statusline2)
 call gruvbox_material#highlight('MiniStatuslineFilename', s:palette.grey2, s:palette.bg_statusline1)
 call gruvbox_material#highlight('MiniStatuslineModeInactive', s:palette.grey2, s:palette.bg_statusline1)
-call gruvbox_material#highlight('MiniStatuslineModeCommand', s:palette.bg0, s:palette.yellow, 'bold')
+call gruvbox_material#highlight('MiniStatuslineModeCommand', s:palette.bg0, s:palette.fg0, 'bold')
 call gruvbox_material#highlight('MiniStatuslineModeInsert', s:palette.bg0, s:palette.bg_green, 'bold')
 call gruvbox_material#highlight('MiniStatuslineModeNormal', s:palette.bg0, s:palette.grey2, 'bold')
 call gruvbox_material#highlight('MiniStatuslineModeOther', s:palette.bg0, s:palette.purple, 'bold')
@@ -1355,9 +1355,9 @@ call gruvbox_material#highlight('MiniStatuslineModeReplace', s:palette.bg0, s:pa
 call gruvbox_material#highlight('MiniStatuslineModeVisual', s:palette.bg0, s:palette.bg_red, 'bold')
 call gruvbox_material#highlight('MiniTablineCurrent', s:palette.fg1, s:palette.bg5)
 call gruvbox_material#highlight('MiniTablineHidden', s:palette.grey1, s:palette.bg3)
-call gruvbox_material#highlight('MiniTablineModifiedCurrent', s:palette.yellow, s:palette.bg5)
+call gruvbox_material#highlight('MiniTablineModifiedCurrent', s:palette.fg0, s:palette.bg5)
 call gruvbox_material#highlight('MiniTablineModifiedHidden', s:palette.grey1, s:palette.bg3)
-call gruvbox_material#highlight('MiniTablineModifiedVisible', s:palette.yellow, s:palette.bg3)
+call gruvbox_material#highlight('MiniTablineModifiedVisible', s:palette.fg0, s:palette.bg3)
 call gruvbox_material#highlight('MiniTablineTabpagesection', s:palette.bg0, s:palette.grey2, 'bold')
 call gruvbox_material#highlight('MiniTablineVisible', s:palette.fg1, s:palette.bg3)
 call gruvbox_material#highlight('MiniTestEmphasis', s:palette.none, s:palette.none, 'bold')
@@ -1382,7 +1382,7 @@ highlight! link MiniTablineFill TabLineFill
 " }}}
 " ggandor/lightspeed.nvim {{{
 call gruvbox_material#highlight('LightspeedLabel', s:palette.red, s:palette.none, 'bold,underline')
-call gruvbox_material#highlight('LightspeedLabelDistant', s:palette.yellow, s:palette.none, 'bold,underline')
+call gruvbox_material#highlight('LightspeedLabelDistant', s:palette.fg0, s:palette.none, 'bold,underline')
 call gruvbox_material#highlight('LightspeedShortcut', s:palette.bg0, s:palette.red, 'bold')
 call gruvbox_material#highlight('LightspeedUnlabeledMatch', s:palette.fg0, s:palette.none, 'bold')
 call gruvbox_material#highlight('LightspeedPendingOpArea', s:palette.bg0, s:palette.green)
@@ -1636,18 +1636,18 @@ highlight! link NeoTreeRootName Title
 " syn_end }}}
 " syn_begin: octo {{{
 " https://github.com/pwntester/octo.nvim
-call gruvbox_material#highlight('OctoViewer', s:palette.bg0, s:palette.yellow)
+call gruvbox_material#highlight('OctoViewer', s:palette.bg0, s:palette.fg0)
 call gruvbox_material#highlight('OctoGreenFloat', s:palette.green, s:palette.bg3)
 call gruvbox_material#highlight('OctoRedFloat', s:palette.red, s:palette.bg3)
 call gruvbox_material#highlight('OctoPurpleFloat', s:palette.purple, s:palette.bg3)
 call gruvbox_material#highlight('OctoYellowFloat', s:palette.blue, s:palette.bg3)
-call gruvbox_material#highlight('OctoBlueFloat', s:palette.yellow, s:palette.bg3)
+call gruvbox_material#highlight('OctoBlueFloat', s:palette.fg0, s:palette.bg3)
 call gruvbox_material#highlight('OctoGreyFloat', s:palette.grey1, s:palette.bg3)
 call gruvbox_material#highlight('OctoBubbleGreen', s:palette.bg0, s:palette.green)
 call gruvbox_material#highlight('OctoBubbleRed', s:palette.bg0, s:palette.red)
 call gruvbox_material#highlight('OctoBubblePurple', s:palette.bg0, s:palette.purple)
 call gruvbox_material#highlight('OctoBubbleYellow', s:palette.bg0, s:palette.blue)
-call gruvbox_material#highlight('OctoBubbleBlue', s:palette.bg0, s:palette.yellow)
+call gruvbox_material#highlight('OctoBubbleBlue', s:palette.bg0, s:palette.fg0)
 call gruvbox_material#highlight('OctoBubbleGrey', s:palette.bg0, s:palette.grey1)
 highlight! link OctoGreen Green
 highlight! link OctoRed Red
@@ -1738,9 +1738,9 @@ call gruvbox_material#highlight('markdownH1', s:palette.red, s:palette.none, 'bo
 call gruvbox_material#highlight('markdownH2', s:palette.orange, s:palette.none, 'bold')
 call gruvbox_material#highlight('markdownH3', s:palette.blue, s:palette.none, 'bold')
 call gruvbox_material#highlight('markdownH4', s:palette.green, s:palette.none, 'bold')
-call gruvbox_material#highlight('markdownH5', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('markdownH5', s:palette.fg0, s:palette.none, 'bold')
 call gruvbox_material#highlight('markdownH6', s:palette.purple, s:palette.none, 'bold')
-call gruvbox_material#highlight('markdownUrl', s:palette.yellow, s:palette.none, 'underline')
+call gruvbox_material#highlight('markdownUrl', s:palette.fg0, s:palette.none, 'underline')
 call gruvbox_material#highlight('markdownItalic', s:palette.none, s:palette.none, 'italic')
 call gruvbox_material#highlight('markdownBold', s:palette.none, s:palette.none, 'bold')
 call gruvbox_material#highlight('markdownItalicDelimiter', s:palette.grey1, s:palette.none, 'italic')
@@ -1763,7 +1763,7 @@ highlight! link markdownBoldDelimiter Grey
 highlight! link markdownId Yellow
 " }}}
 " vim-markdown: https://github.com/gabrielelana/vim-markdown {{{
-call gruvbox_material#highlight('mkdURL', s:palette.yellow, s:palette.none, 'underline')
+call gruvbox_material#highlight('mkdURL', s:palette.fg0, s:palette.none, 'underline')
 call gruvbox_material#highlight('mkdInlineURL', s:palette.purple, s:palette.none, 'underline')
 call gruvbox_material#highlight('mkdItalic', s:palette.grey1, s:palette.none, 'italic')
 highlight! link mkdCodeDelimiter Aqua
@@ -1781,9 +1781,9 @@ call gruvbox_material#highlight('VimwikiHeader1', s:palette.red, s:palette.none,
 call gruvbox_material#highlight('VimwikiHeader2', s:palette.orange, s:palette.none, 'bold')
 call gruvbox_material#highlight('VimwikiHeader3', s:palette.blue, s:palette.none, 'bold')
 call gruvbox_material#highlight('VimwikiHeader4', s:palette.green, s:palette.none, 'bold')
-call gruvbox_material#highlight('VimwikiHeader5', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('VimwikiHeader5', s:palette.fg0, s:palette.none, 'bold')
 call gruvbox_material#highlight('VimwikiHeader6', s:palette.purple, s:palette.none, 'bold')
-call gruvbox_material#highlight('VimwikiLink', s:palette.yellow, s:palette.none, 'underline')
+call gruvbox_material#highlight('VimwikiLink', s:palette.fg0, s:palette.none, 'underline')
 call gruvbox_material#highlight('VimwikiItalic', s:palette.none, s:palette.none, 'italic')
 call gruvbox_material#highlight('VimwikiBold', s:palette.none, s:palette.none, 'bold')
 call gruvbox_material#highlight('VimwikiUnderline', s:palette.none, s:palette.none, 'underline')
@@ -1841,7 +1841,7 @@ call gruvbox_material#highlight('htmlH1', s:palette.red, s:palette.none, 'bold')
 call gruvbox_material#highlight('htmlH2', s:palette.orange, s:palette.none, 'bold')
 call gruvbox_material#highlight('htmlH3', s:palette.blue, s:palette.none, 'bold')
 call gruvbox_material#highlight('htmlH4', s:palette.green, s:palette.none, 'bold')
-call gruvbox_material#highlight('htmlH5', s:palette.yellow, s:palette.none, 'bold')
+call gruvbox_material#highlight('htmlH5', s:palette.fg0, s:palette.none, 'bold')
 call gruvbox_material#highlight('htmlH6', s:palette.purple, s:palette.none, 'bold')
 call gruvbox_material#highlight('htmlLink', s:palette.none, s:palette.none, 'underline')
 call gruvbox_material#highlight('htmlBold', s:palette.none, s:palette.none, 'bold')
